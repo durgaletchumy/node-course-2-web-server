@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 //to set the port according to what heroku will set
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -62,6 +62,14 @@ app.get('/about', (req, res) => {
     // res.send("About Page")
     res.render("about.hbs", {
         pageTitle: "About page"
+    });
+});
+
+app.get('/projects', (req, res) => {
+    // res.send("About Page")
+    res.render("projects.hbs", {
+        pageTitle: "Projects page",
+        pageDetails: "Project Portfolio Here."
     });
 });
 
